@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="ionlist">
+    <ion-item *ngFor="let pic of picArray" class="ionitem">
+      <ion-thumbnail item-start class="ionthumb">
+        <img [src]="pic.thumbnail">
+      </ion-thumbnail>
+      <h2>{{pic.title}}</h2>
+      <p>{{pic.details}}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
