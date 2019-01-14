@@ -47,6 +47,6 @@ export class HomePage {
   ) {}
 
   viewOriginalImage(linkImage: string) {
-    this.photoViewer.show(linkImage, 'aaa');
+    this.photoViewer.show(linkImage);
   }
 }
