@@ -53,7 +53,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="http://192.168.10.57:8100" sessionid="b03eb75e" />
+    <allow-navigation href="http://192.168.10.57:8100" sessionid="d14ac117" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
