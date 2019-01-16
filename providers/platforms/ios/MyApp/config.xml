@@ -45,7 +45,7 @@
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.10.57:8101" />
+    <content original-src="index.html" src="http://10.112.213.237:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -54,7 +54,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-navigation href="http://192.168.10.57:8100" sessionid="d14ac117" />
-    <allow-navigation href="http://192.168.10.57:8101" sessionid="b3d442cd" />
+    <allow-navigation href="http://10.112.213.237:8100" sessionid="ce9dad35" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />

@@ -76,7 +76,7 @@ var HomePage = /** @class */ (function () {
         });
     };
     HomePage.prototype.viewOriginalImage = function (linkImage) {
-        this.photoViewer.show(linkImage);
+        this.photoViewer.show(this.url + linkImage);
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
