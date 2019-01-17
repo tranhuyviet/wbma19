@@ -39,10 +39,13 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="CDVIonicKeyboard" />
     </feature>
+    <feature name="PhotoViewer">
+        <param name="ios-package" value="PhotoViewer" />
+    </feature>
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://10.112.196.53:8102" />
+    <content original-src="index.html" src="http://10.112.220.63:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -50,8 +53,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="http://10.112.196.53:8101" sessionid="43994d3e" />
-    <allow-navigation href="http://10.112.196.53:8102" sessionid="c4576cfb" />
+    <allow-navigation href="http://10.112.220.63:8100" sessionid="a19311ed" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -109,7 +111,4 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <feature name="PhotoViewer">
-        <param name="ios-package" value="PhotoViewer" />
-    </feature>
 </widget>

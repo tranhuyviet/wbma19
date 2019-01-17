@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let pic of media">
+      <ion-thumbnail item-start>
+        <img [src]="url+pic.filename">
+      </ion-thumbnail>
+      <h2>{{pic.title}}</h2>
+      <p>{{pic.description}}</p>
+      <button ion-button clear item-end (click)="viewOriginalImage(pic.filename)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

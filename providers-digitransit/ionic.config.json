@@ -1,0 +1,13 @@
+{
+  "name": "digitransit",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path":"/api",
+      "proxyUrl": "http://media.mw.metropolia.fi/wbma"
+    }
+  ]
+}
