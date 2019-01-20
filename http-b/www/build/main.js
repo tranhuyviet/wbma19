@@ -69,23 +69,31 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.getPic = function () {
         var _this = this;
-        // this.http.get('../../assets/test.json').subscribe((result: Pic[]) => {
         this.http.get('http://media.mw.metropolia.fi/wbma/media').subscribe(function (result) {
-            _this.picArray = result;
+            _this.picArray = result.map(function (dt) {
+                // console.log(dt);
+                return {
+                    title: dt.title,
+                    description: dt.description,
+                    filename: _this.url + dt.filename,
+                    thumbnails: _this.url + dt.filename.substring(0, dt.filename.lastIndexOf('.')) + '-tn160.png'
+                };
+            });
             console.log(_this.picArray);
         });
     };
     HomePage.prototype.viewOriginalImage = function (linkImage) {
-        this.photoViewer.show(this.url + linkImage);
+        this.photoViewer.show(linkImage);
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/viettran/Documents/GitHub/wbma19/http-b/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item *ngFor="let pic of picArray">\n      <ion-thumbnail item-start>\n        <img [src]="url+pic.filename">\n      </ion-thumbnail>\n      <h2>{{pic.title}}</h2>\n      <p>{{pic.description}}</p>\n      <button ion-button clear item-end (click)="viewOriginalImage(pic.filename)">View</button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/viettran/Documents/GitHub/wbma19/http-b/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/viettran/Documents/GitHub/wbma19/http-b/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item *ngFor="let pic of picArray">\n      <ion-thumbnail item-start>\n        <img [src]="pic.thumbnails">\n      </ion-thumbnail>\n      <h2>{{pic.title}}</h2>\n      <p>{{pic.description}}</p>\n      <button ion-button clear item-end (click)="viewOriginalImage(pic.filename)">View</button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/viettran/Documents/GitHub/wbma19/http-b/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_photo_viewer__["a" /* PhotoViewer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_photo_viewer__["a" /* PhotoViewer */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map

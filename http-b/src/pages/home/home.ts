@@ -26,14 +26,21 @@ export class HomePage implements OnInit {
   }
 
   getPic() {
-    // this.http.get('../../assets/test.json').subscribe((result: Pic[]) => {
     this.http.get<Pic[]>('http://media.mw.metropolia.fi/wbma/media').subscribe((result: Pic[]) => {
-      this.picArray = result;
+      this.picArray = result.map(dt => {
+        // console.log(dt);
+        return{
+          title: dt.title,
+          description: dt.description,
+          filename: this.url + dt.filename,
+          thumbnails: this.url + dt.filename.substring(0, dt.filename.lastIndexOf('.')) + '-tn160.png'
+        };
+      });
       console.log(this.picArray);
     });
   }
 
   viewOriginalImage(linkImage: string) {
-    this.photoViewer.show(this.url + linkImage);
+    this.photoViewer.show(linkImage);
   }
 }
