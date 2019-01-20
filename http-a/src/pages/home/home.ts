@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   }
 
   getPic() {
-    this.http.get('../../assets/test.json').subscribe((result: Pic[]) => {
+    this.http.get<Pic[]>('../../assets/test.json').subscribe((result: Pic[]) => {
       this.picArray = result;
       console.log(this.picArray);
     });
